@@ -1,0 +1,17 @@
+name: 'Capability parser'
+description: 'Parses the yaml body of the issue'
+inputs:
+  admin_token:
+    description: Admin token with access to the organization
+    required: true
+outputs:
+  action:
+    description: The name of the command
+  name:
+    description: Name of the repository
+  description:
+    description: Description of the repository
+
+runs:
+  using: 'node12'
+  main: 'dist/index.js'
